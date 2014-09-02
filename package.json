@@ -1,0 +1,15 @@
+{
+  "name": "aStream",
+  "description": "some Wrapper on the Stream-API ",
+  "version": "0.0.1",
+  "author": "Paul Nordmann <paul.nordmann@klab-berlin.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Klab-Berlin/aStream.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "engine": "node > 0.10.0"
+}
