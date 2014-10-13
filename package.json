@@ -1,7 +1,7 @@
 {
   "name": "aStream",
   "description": "some Wrapper on the Stream-API ",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Paul Nordmann <paul.nordmann@klab-berlin.com>",
   "repository": {
     "type": "git",
