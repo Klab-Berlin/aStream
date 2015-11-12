@@ -6,7 +6,7 @@ var aStream = require(rootDir),
 var dirFiles = [];
 
 before(function(done){
-	new aStream.ReadDir(__dirname)
+	new aStream.ReadDir(rootDir + '/lib')
 	.on('data', dirFiles.push.bind(dirFiles))
 	.on('end', function(){
 		if (dirFiles.length === 0) throw new Error('no files found for test in ' + __dirname);
@@ -19,7 +19,7 @@ describe("CreateFileStreams", function() {
 	it ('should return buffers and finish', function(done){
 		var counter = 0;
 		
-		new aStream.ReadDir(__dirname)
+		new aStream.ReadDir(rootDir + '/lib')
 		.pipe(new aStream.CreateFileStreams())
 		.on('data', function(data){
 			data.should.be.a.Buffer;
