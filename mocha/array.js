@@ -31,4 +31,18 @@ describe("Array", function() {
 		
 		toTestArray.length.should.equal(0);
 	})
+	
+	it('should not reduce given array', function(){
+		var testArray = [1, 2, 3, 'four', true];
+		var length = testArray.length;
+			
+		new aStream.Array(testArray)
+		.on('data', function(file){
+			testArray.length.should.equal(length);
+		})
+		.on('end', function(){
+			testArray.length.should.equal(length);
+			done();
+		})
+	})
 });
