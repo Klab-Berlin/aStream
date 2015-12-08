@@ -7,7 +7,7 @@ describe("Array", function() {
 
 	it('should return all values in roder by event', function(done){
 		var testArray = [1, 2, 3, 'four', true];
-		var toTestArray = testArray.map(function(data){return data});
+		var toTestArray = testArray.slice(0);
 		
 		new aStream.Array(testArray)
 		.on('data', function(file){
@@ -22,7 +22,7 @@ describe("Array", function() {
 
 	it('should return all values in roder by read', function(){
 		var testArray = [1, 2, 3, 'four', true];
-		var toTestArray = testArray.map(function(data){return data});
+		var toTestArray = testArray.slice(0);
 		var stream = new aStream.Array(testArray);
 			
 		for (var value = stream.read(); value !== null; value = stream.read()) {
